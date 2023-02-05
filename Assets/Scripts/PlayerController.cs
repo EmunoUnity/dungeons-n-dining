@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
 
     public MeshRenderer meshRend;
 
+    public List<Vector3> positionList;
+    public int distance = 20;
+    public GameObject test;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +25,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        positionList.Add(transform.position);
+
+        
+
         //BasicPlayerMovement
         horizontalInput = Input.GetAxis("Horizontal");
         verticleInput = Input.GetAxis("Vertical");
@@ -28,7 +36,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.forward * verticleInput * Time.deltaTime * speed);
 
         //Dashing
-        if (Input.GetKeyDown(KeyCode.LeftShift) && isMoving == true ||  && isMoving == true)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && isMoving == true)
         {
             StartCoroutine(Dash());
         }
@@ -63,6 +71,8 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    
+
     IEnumerator Dash()
     {
         canbeHit = false;
@@ -70,5 +80,15 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(1);
         canbeHit = true;
         isDashing = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        test = other.gameObject;
+        if (positionList.Count > distance)
+        {
+            positionList.RemoveAt(0);
+            test.transform.position = positionList[0];
+        }
     }
 }
