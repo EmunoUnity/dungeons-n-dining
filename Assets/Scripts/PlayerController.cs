@@ -12,9 +12,10 @@ public class PlayerController : MonoBehaviour
 
     public MeshRenderer meshRend;
 
-    public List<Vector3> positionList;
+    public Transform target;
     public int distance = 20;
     public GameObject test;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        positionList.Add(transform.position);
+       
 
         
 
@@ -82,13 +83,5 @@ public class PlayerController : MonoBehaviour
         isDashing = false;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        test = other.gameObject;
-        if (positionList.Count > distance)
-        {
-            positionList.RemoveAt(0);
-            test.transform.position = positionList[0];
-        }
-    }
+    
 }

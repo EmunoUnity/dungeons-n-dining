@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FoodController : MonoBehaviour
 {
+    private FoodMovement fMove;
+    private PlayerController pController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +19,9 @@ public class FoodController : MonoBehaviour
         
     }
 
-  
+    private void OnCollisionEnter(Collision collision)
+    {
+       
+    }
+
 }
