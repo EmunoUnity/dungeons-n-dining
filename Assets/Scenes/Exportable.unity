@@ -1964,7 +1964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60435fcae72f9340b3ff2f4006c82e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 50, y: 50}
+  size: {x: 5, y: 5}
   startPos: 0
   rooms:
   - room: {fileID: 4320210892517239410, guid: 051c8ef9f4cfe8d4c953ca6843d366f7, type: 3}
@@ -1975,6 +1975,10 @@ MonoBehaviour:
     minPosition: {x: 2, y: 2}
     maxPosition: {x: 5, y: 5}
     obligatory: 0
+  - room: {fileID: 4320210892517239410, guid: c4f7a19628bfd1744ba222a3edaf1ee4, type: 3}
+    minPosition: {x: 0, y: 0}
+    maxPosition: {x: 0, y: 0}
+    obligatory: 1
   offset: {x: 6, y: 6}
 --- !u!4 &1399445412
 Transform:
