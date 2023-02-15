@@ -33,8 +33,8 @@ public class PlayerController : MonoBehaviour
         //BasicPlayerMovement
         horizontalInput = Input.GetAxis("Horizontal");
         verticleInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-        transform.Translate(Vector3.forward * verticleInput * Time.deltaTime * speed);
+        transform.Translate(Vector3.forward * horizontalInput * Time.deltaTime * speed);
+        transform.Translate(Vector3.left * verticleInput * Time.deltaTime * speed);
 
         //Dashing
         if (Input.GetKeyDown(KeyCode.LeftShift) && isMoving == true)
