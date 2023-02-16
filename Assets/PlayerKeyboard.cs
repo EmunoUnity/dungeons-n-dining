@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerKeyboard : MonoBehaviour
+public class PLayerKeyboard : MonoBehaviour
 {
     public float horizontalInput;
     public float verticleInput;
@@ -132,5 +132,4 @@ public class PlayerKeyboard : MonoBehaviour
             imtrue3 = true;
         }
     }
-
 }
