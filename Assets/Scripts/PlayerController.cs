@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,9 +30,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        var gamepad = Gamepad.current;
 
-        
+        if (gamepad == null)
+            return;
 
         //BasicPlayerMovement
         horizontalInput = Input.GetAxis("Horizontal");
@@ -51,7 +53,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Dashing
-        if (Input.GetKeyDown(KeyCode.LeftShift) && isMoving == true)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && isMoving == true || gamepad.circleButton.wasPressedThisFrame && isMoving == true)
         {
             StartCoroutine(Dash());
         }
