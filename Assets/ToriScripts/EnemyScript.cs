@@ -13,7 +13,7 @@ public class EnemyScript : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        dangerRange = 2;
+        dangerRange = 6;
     }
 
     // Update is called once per frame
@@ -22,6 +22,8 @@ public class EnemyScript : MonoBehaviour
         if (Vector3.Distance(this.transform.position, player.transform.position) <= dangerRange)
         {
             Debug.Log("Player in range");
+
+            
         }
     }
 
