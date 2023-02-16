@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerKeyboard : MonoBehaviour
 {
     public float horizontalInput;
     public float verticleInput;
@@ -24,22 +23,16 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        var gamepad = Gamepad.current;
 
-        var keyboard = Keyboard.current;
 
-        if (gamepad == null)
-        {
-            keyboard.MakeCurrent();
-        }
 
-       
+
         //BasicPlayerMovement
         horizontalInput = Input.GetAxis("Horizontal");
         verticleInput = Input.GetAxis("Vertical");
@@ -50,7 +43,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
 
         //Rotation
-        if(movementDirection != Vector3.zero)
+        if (movementDirection != Vector3.zero)
         {
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
 
@@ -58,14 +51,14 @@ public class PlayerController : MonoBehaviour
         }
 
         //Dashing
-        if (gamepad.circleButton.wasPressedThisFrame && isMoving == true && isDashing == false)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && isMoving == true && isDashing == false)
         {
             StartCoroutine(Dash());
         }
 
-       
 
-        if (gamepad.circleButton.wasPressedThisFrame && isMoving == true && isDashing == true)
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && isMoving == true && isDashing == false)
         {
 
             if (isDashing == true)
@@ -75,8 +68,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-       
-        if ( horizontalInput == 0 && verticleInput == 0)
+
+        if (horizontalInput == 0 && verticleInput == 0)
         {
             isMoving = false;
         }
@@ -90,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        if(isDashing == true)
+        if (isDashing == true)
         {
             speed = 15;
         }
@@ -101,12 +94,12 @@ public class PlayerController : MonoBehaviour
 
         //Attacking
 
-    
 
-        
+
+
     }
 
-    
+
 
     IEnumerator Dash()
     {
@@ -139,6 +132,5 @@ public class PlayerController : MonoBehaviour
             imtrue3 = true;
         }
     }
-
 
 }
