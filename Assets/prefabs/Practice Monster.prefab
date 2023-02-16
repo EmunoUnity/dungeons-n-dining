@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8987201457261367240}
   - component: {fileID: 8987201457261367243}
   - component: {fileID: 1896489594275203758}
+  - component: {fileID: 7338238215934062977}
   m_Layer: 0
   m_Name: Practice Monster
   m_TagString: Roaming
@@ -128,3 +129,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   open: 0
+--- !u!114 &7338238215934062977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8987201457261367242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d95c4c5e3253b4db1e1c981917e46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
