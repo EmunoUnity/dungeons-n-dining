@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public float rotationSpeed = 2f;
 
+    public Animator animator1;
+    
+
     public bool canbeHit, isDashing, isMoving, imtrue1, imtrue2, imtrue3;
 
     public MeshRenderer meshRend;
@@ -24,20 +27,13 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator1 = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         var gamepad = Gamepad.current;
-
-        var keyboard = Keyboard.current;
-
-        if (gamepad == null)
-        {
-            keyboard.MakeCurrent();
-        }
 
        
         //BasicPlayerMovement
@@ -79,10 +75,12 @@ public class PlayerController : MonoBehaviour
         if ( horizontalInput == 0 && verticleInput == 0)
         {
             isMoving = false;
+            animator1.SetBool("Walk", false);
         }
         else
         {
             isMoving = true;
+            animator1.SetBool("Walk", true);
         }
 
         if (canbeHit == false)
@@ -93,17 +91,26 @@ public class PlayerController : MonoBehaviour
         if(isDashing == true)
         {
             speed = 15;
+            animator1.SetBool("Run", true);
+
         }
         else
         {
             speed = 5;
+            animator1.SetBool("Run", false);
         }
 
         //Attacking
 
-    
+        if (gamepad.squareButton.wasPressedThisFrame)
+        {
+            animator1.Play("ATTACK");
+        }
 
-        
+        if (gamepad.rightShoulder.wasPressedThisFrame)
+        {
+            animator1.Play("ROLL");
+        }
     }
 
     
