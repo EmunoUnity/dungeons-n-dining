@@ -320,7 +320,11 @@ MonoBehaviour:
   rotationSpeed: 720
   canbeHit1: 0
   isDashing1: 0
+  isRolling: 0
   isMoving: 0
+  attack1: 0
+  attack2: 0
+  canRoll: 1
   animator: {fileID: 66884103}
   target1: {fileID: 0}
   distance: 20
@@ -774,7 +778,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8611c50ec6f23be4a8f5aae0ff15e9ea, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5c80a94061c1e0d46b288f838abfb196, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1613,7 +1617,11 @@ MonoBehaviour:
   rotationSpeed: 720
   canbeHit1: 0
   isDashing1: 0
+  isRolling: 0
   isMoving: 0
+  attack1: 0
+  attack2: 0
+  canRoll: 0
   animator: {fileID: 0}
   target1: {fileID: 0}
   distance: 20

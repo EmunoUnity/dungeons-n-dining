@@ -9,7 +9,7 @@ public class PlayKeys : MonoBehaviour
     public float speed = 5f;
     public float rotationSpeed = 2f;
 
-    public bool canbeHit1, isDashing1, isMoving;
+    public bool canbeHit1, isDashing1, isRolling, isMoving, attack1, attack2, canRoll;
 
     public Animator animator;
 
@@ -87,7 +87,7 @@ public class PlayKeys : MonoBehaviour
 
         }
 
-        if (isDashing1== true)
+        if (isDashing1== true && isRolling == false)
         {
             speed = 15;
             animator.SetBool("Run", true);
@@ -100,16 +100,28 @@ public class PlayKeys : MonoBehaviour
 
         }
 
+        if (isRolling == true)
+        {
+            speed = 20;
+        }
+       
+
         //Attacking
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attack1 == false && attack2 == false)
         {
-            animator.Play("ATTACK");
+            StartCoroutine(AttackCycle());
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if(Input.GetKeyDown(KeyCode.Mouse0) && attack1 == true && attack2 == false)
         {
-            animator.Play("ROLL");
+            StartCoroutine(AttackCycleSecond());
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl) && canRoll == true && isRolling == false)
+        {
+            
+            StartCoroutine(RollMech());
         }
 
 
@@ -119,11 +131,42 @@ public class PlayKeys : MonoBehaviour
 
     IEnumerator Dash1()
     {
-        canbeHit1 = false;
-        yield return new WaitForSeconds(.01f);
         isDashing1 = true;
         yield return new WaitForSeconds(1);
-        canbeHit1 = true;
         isDashing1 = false;
+    }
+
+    IEnumerator AttackCycle()
+    {
+        animator.Play("ATTACK");
+        yield return new WaitForSeconds(.1f);
+        attack1 = true;
+        yield return new WaitForSeconds(.4f);
+        attack1 = false;
+
+    }
+
+    IEnumerator AttackCycleSecond()
+    {
+        animator.Play("DEFNOTROLL");
+        attack1 = false;
+        attack2 = true;
+        yield return new WaitForSeconds(1f);
+        attack2 = false;
+    }
+
+    IEnumerator RollMech()
+    {
+        isRolling = true;
+        animator.Play("ROLL");
+        canbeHit1 = false;
+        Debug.Log("Do a Barrel Roll!");
+        yield return new WaitForSeconds(.5f);
+        canbeHit1 = true;
+        isRolling = false;
+        canRoll = false;
+        yield return new WaitForSeconds(5);
+        canRoll = true;
+        
     }
 }
