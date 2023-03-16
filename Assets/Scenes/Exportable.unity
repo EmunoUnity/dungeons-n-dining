@@ -322,6 +322,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7594077028999122691, guid: 992ede873ae61c64a962f133e7bf9c93, type: 3}
+      propertyPath: m_Name
+      value: Spaxe
+      objectReference: {fileID: 0}
     - target: {fileID: -1771265584702816385, guid: 992ede873ae61c64a962f133e7bf9c93, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -332,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 955af4790ba7cc5479211ed8e85f7b80, type: 2}
     - target: {fileID: 919132149155446097, guid: 992ede873ae61c64a962f133e7bf9c93, type: 3}
       propertyPath: m_Name
-      value: IDLE_FBX
+      value: Chef Giorno
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 992ede873ae61c64a962f133e7bf9c93, type: 3}
       propertyPath: m_IsActive
@@ -3047,8 +3051,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6922787, z: 0.4167908}
-  m_Center: {x: 0, y: 0.8123941, z: 0.036986295}
+  m_Size: {x: 0.78148615, y: 1.6313285, z: 0.4167908}
+  m_Center: {x: 0.04670121, y: 0.7819191, z: 0.036986295}
 --- !u!54 &1322116150
 Rigidbody:
   m_ObjectHideFlags: 0
