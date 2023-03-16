@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    //public GameObject hand;
     void Start()
     {
         
@@ -13,7 +15,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //transform.position = hand.transform.position;
     }
 
     private void OnCollisionEnter(Collision collision)
