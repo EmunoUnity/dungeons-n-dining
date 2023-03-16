@@ -335,6 +335,10 @@ PrefabInstance:
       value: IDLE_FBX
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 992ede873ae61c64a962f133e7bf9c93, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 992ede873ae61c64a962f133e7bf9c93, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -979,7 +983,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357765373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.5, z: 0}
+  m_LocalPosition: {x: -32, y: 1, z: -923}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2563,7 +2567,11 @@ MonoBehaviour:
   rotationSpeed: 720
   canbeHit1: 0
   isDashing1: 0
+  isRolling: 0
   isMoving: 0
+  attack1: 0
+  attack2: 0
+  canRoll: 0
   animator: {fileID: 1322116148}
   target1: {fileID: 0}
   distance: 20
@@ -3487,7 +3495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1854798518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3596,7 +3604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854798517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0.5, z: -1}
+  m_LocalPosition: {x: -34, y: 0.5, z: -919}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
