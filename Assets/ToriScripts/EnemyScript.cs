@@ -31,7 +31,7 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(this.transform.position, player.transform.position) <= dangerRange)
+            if (Vector3.Distance(this.transform.position, player.transform.position) <= dangerRange)
         {
             //Debug.Log("Player in range");
 
