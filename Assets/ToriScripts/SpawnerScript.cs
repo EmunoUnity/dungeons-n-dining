@@ -21,11 +21,14 @@ public class SpawnerScript : MonoBehaviour
 
         spawn = false;
         moreTest = false;
+
+        SpawnMonster();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if(spawn)
         {
             SpawnMonster();
