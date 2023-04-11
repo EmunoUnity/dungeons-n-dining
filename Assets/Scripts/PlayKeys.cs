@@ -9,7 +9,7 @@ public class PlayKeys : MonoBehaviour
     public float speed = 5f;
     public float rotationSpeed = 2f;
 
-    public bool canbeHit1, isDashing1, isRolling, isMoving, attack1, attack2, canRoll;
+    public bool canbeHit1, isDashing1, isRolling, isMoving, attack1, attack2, attack3, canRoll, secondAttack;
 
     public Animator animator;
 
@@ -108,7 +108,7 @@ public class PlayKeys : MonoBehaviour
 
         //Attacking
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && attack1 == false && attack2 == false)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attack1 == false && attack2 == false && attack3 == false)
         {
             StartCoroutine(AttackCycle());
         }
@@ -116,6 +116,11 @@ public class PlayKeys : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse0) && attack1 == true && attack2 == false)
         {
             StartCoroutine(AttackCycleSecond());
+        }
+
+        if(Input.GetKeyDown(KeyCode.Mouse0) && attack1 == false && attack2 == true && attack3 == false && secondAttack == false)
+        {
+            StartCoroutine(AttackCycleOver());
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && canRoll == true && isRolling == false)
@@ -148,11 +153,26 @@ public class PlayKeys : MonoBehaviour
 
     IEnumerator AttackCycleSecond()
     {
-        animator.Play("DEFNOTROLL");
+        animator.Play("LEFT_ATTACK");
         attack1 = false;
+        secondAttack = true;
+        yield return new WaitForSeconds(.2f);
         attack2 = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.1f);
+        secondAttack = false;
+        yield return new WaitForSeconds(.3f);
         attack2 = false;
+        
+    }
+
+    IEnumerator AttackCycleOver()
+    {
+        animator.Play("OVERHEAD");
+        attack2 = false;
+        yield return new WaitForSeconds(.2f);
+        attack3 = true;
+        yield return new WaitForSeconds(.5f);
+        attack3 = false;
     }
 
     IEnumerator RollMech()
