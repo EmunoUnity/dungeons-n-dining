@@ -9,6 +9,8 @@ public class EnemyScript : MonoBehaviour
     private GameObject player;
     private Rigidbody rb;
 
+    private PlayKeys playKeys;
+
     private int dangerRange;
     public int enemyAttack;
 
@@ -31,7 +33,7 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(this.transform.position, player.transform.position) <= dangerRange)
+            if (Vector3.Distance(this.transform.position, player.transform.position) <= dangerRange)
         {
             //Debug.Log("Player in range");
 
@@ -51,6 +53,9 @@ public class EnemyScript : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, player.transform.position, .03f);
             }
         }
+
+            
+     
     }
 
     private IEnumerator Mino()
@@ -60,5 +65,15 @@ public class EnemyScript : MonoBehaviour
         yield return new WaitForSeconds(5);
         attackCollider.SetActive(false);
         sigh = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Weapon")
+        {
+            Destroy(gameObject);
+        }
+
+       
     }
 }

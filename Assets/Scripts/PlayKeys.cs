@@ -9,7 +9,7 @@ public class PlayKeys : MonoBehaviour
     public float speed = 5f;
     public float rotationSpeed = 2f;
 
-    public bool canbeHit1, isDashing1, isRolling, isMoving, attack1, attack2, canRoll;
+    public bool canbeHit1, isDashing1, isRolling, isMoving, attack1, attack2, attack3, canRoll, secondAttack;
 
     public Animator animator;
 
@@ -17,7 +17,9 @@ public class PlayKeys : MonoBehaviour
     public int distance = 20;
     public GameObject test;
     public GameObject player;
+    public GameObject weapon;
 
+   
 
 
 
@@ -25,7 +27,7 @@ public class PlayKeys : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -36,10 +38,14 @@ public class PlayKeys : MonoBehaviour
 
 
         //BasicPlayerMovement
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticleInput = Input.GetAxis("Vertical");
+        //horizontalInput = Input.GetAxis("Horizontal");
+        //verticleInput = Input.GetAxis("Vertical");
 
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticleInput);
+        horizontalInput = Input.GetAxis("Vertical");
+        verticleInput = Input.GetAxis("Horizontal");
+
+
+        Vector3 movementDirection = new Vector3(-horizontalInput, 0, verticleInput);
         movementDirection.Normalize();
 
         transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
@@ -108,7 +114,7 @@ public class PlayKeys : MonoBehaviour
 
         //Attacking
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && attack1 == false && attack2 == false)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attack1 == false && attack2 == false && attack3 == false)
         {
             StartCoroutine(AttackCycle());
         }
@@ -116,6 +122,11 @@ public class PlayKeys : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse0) && attack1 == true && attack2 == false)
         {
             StartCoroutine(AttackCycleSecond());
+        }
+
+        if(Input.GetKeyDown(KeyCode.Mouse0) && attack1 == false && attack2 == true && attack3 == false && secondAttack == false)
+        {
+            StartCoroutine(AttackCycleOver());
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && canRoll == true && isRolling == false)
@@ -140,19 +151,40 @@ public class PlayKeys : MonoBehaviour
     {
         animator.Play("ATTACK");
         yield return new WaitForSeconds(.1f);
+        
         attack1 = true;
         yield return new WaitForSeconds(.4f);
+        
         attack1 = false;
 
     }
 
     IEnumerator AttackCycleSecond()
     {
-        animator.Play("DEFNOTROLL");
+        animator.Play("LEFT_ATTACK");
         attack1 = false;
+        secondAttack = true;
+        yield return new WaitForSeconds(.2f);
+        
         attack2 = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.1f);
+        secondAttack = false;
+        yield return new WaitForSeconds(.3f);
+        
         attack2 = false;
+        
+    }
+
+    IEnumerator AttackCycleOver()
+    {
+        animator.Play("OVERHEAD");
+        attack2 = false;
+        yield return new WaitForSeconds(.2f);
+        
+        attack3 = true;
+        yield return new WaitForSeconds(.5f);
+        
+        attack3 = false;
     }
 
     IEnumerator RollMech()
