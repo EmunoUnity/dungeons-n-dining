@@ -16,7 +16,9 @@ public class EnemyScript : MonoBehaviour
 
     public GameObject attackCollider;
 
-    private bool sigh;
+    private bool sigh, moving;
+
+    public Animator minoAnim;
 
     void Start()
     {
@@ -41,6 +43,7 @@ public class EnemyScript : MonoBehaviour
             {
                 if(enemyAttack == 3 && !sigh)
                 {
+                    
                     //Debug.Log("attacking Player");
                     rb.velocity = Vector3.zero;
 
@@ -49,8 +52,14 @@ public class EnemyScript : MonoBehaviour
             }
             else
             {
+                moving = true;
                 transform.LookAt(player.transform);
                 transform.position = Vector3.MoveTowards(transform.position, player.transform.position, .03f);
+            }
+
+            if(moving == true && sigh == false)
+            {
+                minoAnim.Play("MINO_WALK");
             }
         }
 
@@ -60,8 +69,10 @@ public class EnemyScript : MonoBehaviour
 
     private IEnumerator Mino()
     {
+        moving = false;
         sigh = true;
         attackCollider.SetActive(true);
+        minoAnim.Play("Mino_Attack");
         yield return new WaitForSeconds(5);
         attackCollider.SetActive(false);
         sigh = false;
@@ -71,9 +82,16 @@ public class EnemyScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Weapon")
         {
-            Destroy(gameObject);
+            StartCoroutine(MinoDeath());
         }
 
        
+    }
+
+    private IEnumerator MinoDeath()
+    {
+        minoAnim.Play("Mino_Death");
+        yield return new WaitForSeconds(1.25f);
+        Destroy(gameObject);
     }
 }
