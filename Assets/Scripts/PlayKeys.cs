@@ -17,9 +17,7 @@ public class PlayKeys : MonoBehaviour
     public int distance = 20;
     public GameObject test;
     public GameObject player;
-    public GameObject weapon;
 
-   
 
 
 
@@ -27,7 +25,7 @@ public class PlayKeys : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -38,14 +36,10 @@ public class PlayKeys : MonoBehaviour
 
 
         //BasicPlayerMovement
-        //horizontalInput = Input.GetAxis("Horizontal");
-        //verticleInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticleInput = Input.GetAxis("Vertical");
 
-        horizontalInput = Input.GetAxis("Vertical");
-        verticleInput = Input.GetAxis("Horizontal");
-
-
-        Vector3 movementDirection = new Vector3(-horizontalInput, 0, verticleInput);
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticleInput);
         movementDirection.Normalize();
 
         transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
@@ -151,10 +145,8 @@ public class PlayKeys : MonoBehaviour
     {
         animator.Play("ATTACK");
         yield return new WaitForSeconds(.1f);
-        
         attack1 = true;
         yield return new WaitForSeconds(.4f);
-        
         attack1 = false;
 
     }
@@ -165,12 +157,10 @@ public class PlayKeys : MonoBehaviour
         attack1 = false;
         secondAttack = true;
         yield return new WaitForSeconds(.2f);
-        
         attack2 = true;
         yield return new WaitForSeconds(.1f);
         secondAttack = false;
         yield return new WaitForSeconds(.3f);
-        
         attack2 = false;
         
     }
@@ -180,10 +170,8 @@ public class PlayKeys : MonoBehaviour
         animator.Play("OVERHEAD");
         attack2 = false;
         yield return new WaitForSeconds(.2f);
-        
         attack3 = true;
         yield return new WaitForSeconds(.5f);
-        
         attack3 = false;
     }
 
