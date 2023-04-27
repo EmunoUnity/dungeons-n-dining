@@ -1929,6 +1929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mino_Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 1788541283692716754, guid: c60e73720935b6646a1bb88fff60c542, type: 3}
+      propertyPath: health
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 2258719793487791735, guid: c60e73720935b6646a1bb88fff60c542, type: 3}
       propertyPath: m_RootOrder
       value: 2
