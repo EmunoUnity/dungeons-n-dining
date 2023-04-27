@@ -16,9 +16,13 @@ public class EnemyScript : MonoBehaviour
 
     public GameObject attackCollider;
 
-    private bool sigh, moving;
+    private bool sigh, moving, isHit;
 
     public Animator minoAnim;
+
+    public int health = 100;
+
+    public bool isDead = false;
 
     void Start()
     {
@@ -41,7 +45,7 @@ public class EnemyScript : MonoBehaviour
 
             if (Vector3.Distance(this.transform.position, player.transform.position) <= enemyAttack)
             {
-                if(enemyAttack == 3 && !sigh)
+                if (enemyAttack == 3 && !sigh && isHit == false && isDead == false)
                 {
                     
                     //Debug.Log("attacking Player");
@@ -80,7 +84,12 @@ public class EnemyScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Weapon")
+        if(collision.gameObject.tag == "Weapon" && health != 0 && isDead == false)
+        {
+            StartCoroutine(MinoHit());
+        }
+
+        if (collision.gameObject.tag == "Weapon" && health <= 0 && isDead == false)
         {
             StartCoroutine(MinoDeath());
         }
@@ -88,10 +97,20 @@ public class EnemyScript : MonoBehaviour
        
     }
 
+    private IEnumerator MinoHit()
+    {
+        isHit = true;
+        minoAnim.Play("Mino_Hit");
+        yield return new WaitForSeconds(.5f);
+        isHit = false;
+        health -= 25;
+    }
+
     private IEnumerator MinoDeath()
     {
+        isDead = true;
         minoAnim.Play("Mino_Death");
-        yield return new WaitForSeconds(1.25f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 }
