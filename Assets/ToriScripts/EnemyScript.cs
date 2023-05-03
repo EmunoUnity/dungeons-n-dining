@@ -60,7 +60,7 @@ public class EnemyScript : MonoBehaviour
             {
                 moving = true;
                 transform.LookAt(player.transform);
-                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, .13f);
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, .12f);
             }
 
             if(moving == true && sigh == false)
