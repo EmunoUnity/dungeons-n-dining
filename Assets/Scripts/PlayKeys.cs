@@ -27,7 +27,7 @@ public class PlayKeys : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        canbeHit1 = true;
     }
 
     // Update is called once per frame
