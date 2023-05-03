@@ -24,6 +24,8 @@ public class EnemyScript : MonoBehaviour
 
     public bool isDead = false;
 
+    public GameObject minoPart;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -110,7 +112,9 @@ public class EnemyScript : MonoBehaviour
     {
         isDead = true;
         minoAnim.Play("Mino_Death");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.75f);
+        Instantiate(minoPart, gameObject.transform.position, minoPart.transform.rotation);
+        yield return new WaitForSeconds(.05f);
         Destroy(gameObject);
     }
 }

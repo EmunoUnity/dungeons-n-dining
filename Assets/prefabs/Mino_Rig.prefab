@@ -550,6 +550,8 @@ MonoBehaviour:
   enemyAttack: 3
   attackCollider: {fileID: 1788541284229621988}
   minoAnim: {fileID: 1788541283692716719}
+  health: 120
+  isDead: 0
 --- !u!114 &1788541283692716755
 MonoBehaviour:
   m_ObjectHideFlags: 0
