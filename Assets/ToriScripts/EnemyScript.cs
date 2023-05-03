@@ -39,7 +39,7 @@ public class EnemyScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
             if (Vector3.Distance(this.transform.position, player.transform.position) <= dangerRange)
         {
@@ -60,7 +60,7 @@ public class EnemyScript : MonoBehaviour
             {
                 moving = true;
                 transform.LookAt(player.transform);
-                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, 0.15f);
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, .03f);
             }
 
             if(moving == true && sigh == false)
@@ -79,7 +79,7 @@ public class EnemyScript : MonoBehaviour
         sigh = true;
         attackCollider.SetActive(true);
         minoAnim.Play("Mino_Attack");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
         attackCollider.SetActive(false);
         sigh = false;
     }
