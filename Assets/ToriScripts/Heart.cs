@@ -61,7 +61,7 @@ public class Heart : MonoBehaviour
 
     public void working()
     {
-        if(Input.GetKeyDown(KeyCode.G))
+        /*if(Input.GetKeyDown(KeyCode.G))
         {
             myHeath -= 1;
         }
@@ -69,6 +69,6 @@ public class Heart : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             myHeath += 1;
-        }
+        }*/
     }
 }
