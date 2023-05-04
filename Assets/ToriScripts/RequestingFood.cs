@@ -13,7 +13,7 @@ public class RequestingFood : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        meal = GameObject.FindGameObjectWithTag("Roaming");
+        //meal = GameObject.FindGameObjectWithTag("Roaming");
         player = GameObject.FindGameObjectWithTag("Player");
         ordered = false;
 
@@ -31,6 +31,7 @@ public class RequestingFood : MonoBehaviour
             {
                 if (!ordered)
                 {
+                    meal = GameObject.FindGameObjectWithTag("Roaming");
                     if (meal.GetComponent<Requested>().open == 0)
                     {
                         meal.GetComponent<Requested>().open = 1;
@@ -43,6 +44,11 @@ public class RequestingFood : MonoBehaviour
                 else if(ordered && gameManager.drop == dinner)
                 {
                     Debug.Log("Thank you!");
+                    gameManager.drop = "";
+                }
+                else
+                {
+                    Debug.Log("Get me Food!");
                 }
             }
         }

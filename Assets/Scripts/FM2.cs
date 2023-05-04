@@ -8,6 +8,7 @@ public class FM2 : MonoBehaviour
     private GameObject target;
     private float speed = 60;
     public GameManager manager;
+    private bool cry;
 
     private Transform pickupOne, pickupTwo, pickupThree;
 
@@ -22,6 +23,8 @@ public class FM2 : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player");
         manager = FindObjectOfType<GameManager>();
+
+        cry = false;
     }
 
     // Update is called once per frame
@@ -45,7 +48,13 @@ public class FM2 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            manager.Minotaur = true;
+            if(!cry)
+            {
+                manager.Minotaur = true;
+                cry = true;
+    
+            }
+
             speed = 10f;
             pickupTwo = other.transform;
         }

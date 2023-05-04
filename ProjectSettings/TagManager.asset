@@ -9,6 +9,7 @@ TagManager:
   - Roaming
   - Requested
   - Weapon
+  - Diner
   layers:
   - Default
   - TransparentFX
