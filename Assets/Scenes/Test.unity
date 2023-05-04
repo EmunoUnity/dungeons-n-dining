@@ -483,6 +483,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 782246752555107356, guid: 70e51a8be0f46e84cb25a616dcd5dca9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2c9e778cd2bc22a44a7a522200305b4d, type: 2}
     - target: {fileID: 7021467798109210162, guid: 70e51a8be0f46e84cb25a616dcd5dca9, type: 3}
       propertyPath: m_Name
       value: Chef Giorno
@@ -1291,10 +1295,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53f0aa28f3cc520438c2c04fcf31c900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAttack: 3
+  enemyAttack: 5
   attackCollider: {fileID: 2141927119}
   medAnim: {fileID: 1648617320}
-  health: 100
+  health: 200
   isDead: 0
   medPart: {fileID: 673826631316720743, guid: 14bb211b58eb25f4182b62e097ba4993, type: 3}
   medDrop: {fileID: 6267364976603612557, guid: 4f445ae3b9174f04f96596e3d99d8037, type: 3}
@@ -1528,7 +1532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738387508}
   m_LocalRotation: {x: -0.000000010011718, y: 0.000000009080395, z: -0.000000008752977, w: 1}
-  m_LocalPosition: {x: -694, y: -327, z: 334}
+  m_LocalPosition: {x: -668, y: -327, z: 410}
   m_LocalScale: {x: 2.5068994, y: 2.5068989, z: 2.5069003}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1851,7 +1855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141927119}
   m_LocalRotation: {x: -0.000000012107192, y: 0.000000009313225, z: 0.000000028070641, w: 1}
-  m_LocalPosition: {x: -1193, y: -326.99994, z: 334}
+  m_LocalPosition: {x: -1174, y: -387, z: 342}
   m_LocalScale: {x: 2.5068996, y: 2.5068986, z: 2.5069008}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1921,5 +1925,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3977397205625476841, guid: c60e73720935b6646a1bb88fff60c542, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d55489f1269ca8e4e95fad962746539a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c60e73720935b6646a1bb88fff60c542, type: 3}
