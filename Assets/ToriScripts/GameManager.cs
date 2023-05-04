@@ -11,7 +11,10 @@ public class GameManager : MonoBehaviour
     public bool Gorgon;
     public bool Cyclops;
 
-    
+    private int GoalMoney;
+    public int GoalAmount;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,8 @@ public class GameManager : MonoBehaviour
         Cyclops = false;
 
         drop = string.Empty;
+        GoalMoney = 1000;
+        GoalAmount = 0;
     }
 
     // Update is called once per frame
@@ -34,6 +39,11 @@ public class GameManager : MonoBehaviour
         if(mini <= 1) 
         {
             drop = "Monster 1";
+        }
+
+        if(GoalAmount == GoalMoney)
+        {
+            Debug.Log("You win!");
         }
         
     }

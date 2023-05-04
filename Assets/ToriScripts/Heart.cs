@@ -10,10 +10,12 @@ public class Heart : MonoBehaviour
     public Image[] Heahht;
     public Sprite full;
     public Sprite empty;
+
+    private PlayKeys play;
     // Start is called before the first frame update
     void Start()
     {
-        
+        play = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayKeys>();
     }
 
     // Update is called once per frame
@@ -29,11 +31,13 @@ public class Heart : MonoBehaviour
         if(myHeath >= Harts)
         {
             myHeath = Harts;
+            play.enabled = false; //die some how
         }
 
         if(myHeath <= 0)
         {
             myHeath = 0;
+
         }
 
         for (int i = 0; i < Heahht.Length; i++)

@@ -51,6 +51,7 @@ public class RequestingFood : MonoBehaviour
                     gameManager.mini--;
                     Debug.Log("Thank you!");
                     gameManager.drop = "";
+                    gameManager.GoalAmount += 200;
                     leave = true;
                     
                 }
