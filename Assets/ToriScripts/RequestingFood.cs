@@ -8,6 +8,7 @@ public class RequestingFood : MonoBehaviour
     private GameObject player;
     private bool ordered;
     private string dinner;
+    public bool leave;
 
     public GameManager gameManager;
     // Start is called before the first frame update
@@ -18,12 +19,16 @@ public class RequestingFood : MonoBehaviour
         ordered = false;
 
         gameManager = FindObjectOfType<GameManager>();
+
+        leave = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         //Debug.Log(meal);
+
+
 
         if (Vector3.Distance(this.transform.position, player.transform.position) <= 3)
         {
@@ -43,8 +48,11 @@ public class RequestingFood : MonoBehaviour
                 }
                 else if(ordered && gameManager.drop == dinner)
                 {
+                    gameManager.mini--;
                     Debug.Log("Thank you!");
                     gameManager.drop = "";
+                    leave = true;
+                    
                 }
                 else
                 {

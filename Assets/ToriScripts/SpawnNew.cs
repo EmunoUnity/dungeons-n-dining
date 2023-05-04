@@ -9,15 +9,20 @@ public class SpawnNew : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Spawn();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.K))
+        /*if(Input.GetKeyUp(KeyCode.K))
         {
             Spawn();
+        }*/
+        
+        if(Customer.GetComponent<RequestingFood>().leave == true) 
+        { 
+            Spawn(); 
         }
     }
 
