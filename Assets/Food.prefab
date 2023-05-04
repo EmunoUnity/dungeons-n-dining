@@ -116,6 +116,6 @@ MonoBehaviour:
   twoPickup: 0
   threePickup: 0
   isDashing: 0
-  pickupOne: {fileID: 0}
-  pickupTwo: {fileID: 0}
-  pickupThree: {fileID: 0}
+  pickupOne: {fileID: 7592874063660180424}
+  pickupTwo: {fileID: 6267364976603612560, guid: 4f445ae3b9174f04f96596e3d99d8037, type: 3}
+  pickupThree: {fileID: 268228128060453436, guid: 3a18d18fe4a89314f95ad198de7420c1, type: 3}
