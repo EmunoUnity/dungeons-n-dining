@@ -44,14 +44,14 @@ public class MedusaController : MonoBehaviour
     {
         if (Vector3.Distance(this.transform.position, player.transform.position) <= dangerRange)
         {
-            //Debug.Log("Player in range");
+            Debug.Log("Player in range");
 
             if (Vector3.Distance(this.transform.position, player.transform.position) <= enemyAttack)
             {
                 if (enemyAttack == 3 && !sigh && isHit == false && isDead == false)
                 {
 
-                    //Debug.Log("attacking Player");
+                    Debug.Log("attacking Player");
                     rb.velocity = Vector3.zero;
 
                     StartCoroutine(Medu());
@@ -113,7 +113,7 @@ public class MedusaController : MonoBehaviour
     private IEnumerator MedDeath()
     {
         isDead = true;
-        medAnim.Play("MED_Death");
+        medAnim.Play("MED_DEATH");
         yield return new WaitForSeconds(.75f);
         Instantiate(medPart, gameObject.transform.position, medPart.transform.rotation);
         Instantiate(medDrop, gameObject.transform.position, medPart.transform.rotation);
