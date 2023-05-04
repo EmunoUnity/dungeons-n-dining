@@ -25,6 +25,7 @@ public class EnemyScript : MonoBehaviour
     public bool isDead = false;
 
     public GameObject minoPart;
+    public GameObject minoDrop;
 
     void Start()
     {
@@ -79,8 +80,9 @@ public class EnemyScript : MonoBehaviour
         sigh = true;
         attackCollider.SetActive(true);
         minoAnim.Play("Mino_Attack");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         attackCollider.SetActive(false);
+        yield return new WaitForSeconds(2);
         sigh = false;
     }
 
@@ -114,6 +116,7 @@ public class EnemyScript : MonoBehaviour
         minoAnim.Play("Mino_Death");
         yield return new WaitForSeconds(.75f);
         Instantiate(minoPart, gameObject.transform.position, minoPart.transform.rotation);
+        Instantiate(minoDrop, gameObject.transform.position, minoPart.transform.rotation);
         yield return new WaitForSeconds(.05f);
         Destroy(gameObject);
     }
