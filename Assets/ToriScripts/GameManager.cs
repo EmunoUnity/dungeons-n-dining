@@ -38,8 +38,7 @@ public class GameManager : MonoBehaviour
 
         if(mini <= 1) 
         {
-            //drop = "Monster 1";
-            drop = "Mino_UnWrapped";
+            drop = "Monster 1";
         }
 
         if(GoalAmount == GoalMoney)
