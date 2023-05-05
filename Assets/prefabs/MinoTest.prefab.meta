@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/prefabs/MinoTest.prefab.meta
 guid: 9f9fb79bc25268447b4cafe1c94a428a
 PrefabImporter:
+========
+guid: f0637e7aefdffef409640f0c8de10a87
+NativeFormatImporter:
+>>>>>>>> c1469e0e38c04e70b93e3307462f6226e7d51c31:Assets/IMPORT/Enviroment/DungeonWall/wire_055055055.003.mat.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
