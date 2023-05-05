@@ -54,7 +54,7 @@ public class SpawnerScript : MonoBehaviour
     void SpawnMonster()
     {
         Monster = Instantiate(Spawner, transform.position, transform.rotation);
-        Monster.name = "Monster " + y;
+        Monster.name = "Minotaur";
         y++;
         spawn = false;
     }

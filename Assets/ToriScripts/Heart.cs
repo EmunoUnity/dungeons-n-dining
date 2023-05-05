@@ -31,7 +31,6 @@ public class Heart : MonoBehaviour
         if(myHeath >= Harts)
         {
             myHeath = Harts;
-            play.enabled = false; //die some how
         }
 
         if(myHeath <= 0)
@@ -65,7 +64,7 @@ public class Heart : MonoBehaviour
 
     public void working()
     {
-        /*if(Input.GetKeyDown(KeyCode.G))
+        if(Input.GetKeyDown(KeyCode.G))
         {
             myHeath -= 1;
         }
@@ -73,6 +72,6 @@ public class Heart : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             myHeath += 1;
-        }*/
+        }
     }
 }

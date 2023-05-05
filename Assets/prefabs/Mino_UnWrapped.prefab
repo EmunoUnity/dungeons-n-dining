@@ -1632,7 +1632,7 @@ MonoBehaviour:
   health: 120
   isDead: 0
   minoPart: {fileID: 673826631316720743, guid: 14bb211b58eb25f4182b62e097ba4993, type: 3}
-  minoDrop: {fileID: 7592874063660180429, guid: e736999a3d1306144a5d393a46505f4e, type: 3}
+  minoDrop: {fileID: 6267364976603612557, guid: 4f445ae3b9174f04f96596e3d99d8037, type: 3}
 --- !u!1 &5556024074090485439
 GameObject:
   m_ObjectHideFlags: 0
