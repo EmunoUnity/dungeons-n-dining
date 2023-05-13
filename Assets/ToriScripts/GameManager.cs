@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         Cyclops = false;
 
         drop = string.Empty;
-        GoalMoney = 1000;
+        GoalMoney = Random.Range(1000, 1690);
         GoalAmount = 0;
     }
 
@@ -38,8 +38,8 @@ public class GameManager : MonoBehaviour
 
         if(mini <= 1) 
         {
-            //drop = "Monster 1";
-            drop = "Mino_UnWrapped";
+            drop = "Minotaur";
+            //drop = "Mino_UnWrapped";
         }
 
         if(GoalAmount == GoalMoney)

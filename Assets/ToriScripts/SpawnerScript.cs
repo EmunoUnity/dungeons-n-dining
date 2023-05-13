@@ -10,7 +10,7 @@ public class SpawnerScript : MonoBehaviour
     public bool spawn;
 
     public bool test;
-    private bool moreTest;
+    public bool moreTest;
 
     private GameObject Monster;
     // Start is called before the first frame update
@@ -34,7 +34,7 @@ public class SpawnerScript : MonoBehaviour
             SpawnMonster();
         }
 
-        if (Monster == null && moreTest)
+        if (moreTest)
         {
             StartCoroutine(SpawnDelay());
             moreTest = false;
@@ -43,9 +43,6 @@ public class SpawnerScript : MonoBehaviour
         if (test)
         {
             Destroy(Monster);
-            moreTest = true;
-            test = false;
-            
         }
 
         
@@ -54,15 +51,16 @@ public class SpawnerScript : MonoBehaviour
     void SpawnMonster()
     {
         Monster = Instantiate(Spawner, transform.position, transform.rotation);
+        Monster.transform.SetParent(transform);
         Monster.name = "Minotaur";
         y++;
         spawn = false;
     }
 
-    private IEnumerator SpawnDelay()
+    public IEnumerator SpawnDelay()
     {
         Debug.Log("Working");
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(30);
         spawn = true;
         
     }

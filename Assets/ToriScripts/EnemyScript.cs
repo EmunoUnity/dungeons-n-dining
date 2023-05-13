@@ -120,4 +120,9 @@ public class EnemyScript : MonoBehaviour
         yield return new WaitForSeconds(.05f);
         Destroy(gameObject);
     }
+
+    private void OnDestroy()
+    {
+        GetComponentInParent<SpawnerScript>().moreTest = true;
+    }
 }
