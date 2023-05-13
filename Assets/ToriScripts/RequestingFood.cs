@@ -50,6 +50,7 @@ public class RequestingFood : MonoBehaviour
                 {
                     gameManager.mini--;
                     Debug.Log("Thank you!");
+                    transform.position = new Vector3(100, 100, 100);
                     gameManager.drop = "";
                     gameManager.GoalAmount += 200;
                     leave = true;

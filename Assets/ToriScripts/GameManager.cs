@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class GameManager : MonoBehaviour
     private int GoalMoney;
     public int GoalAmount;
 
+    public TextMeshProUGUI goaly;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,13 +27,15 @@ public class GameManager : MonoBehaviour
         Cyclops = false;
 
         drop = string.Empty;
-        GoalMoney = Random.Range(1000, 1690);
+        GoalMoney = Random.Range(2000, 3690);
         GoalAmount = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        goaly.text = GoalAmount + " / " + GoalMoney;
+
         if (Minotaur == true)
         {
             mini++;
