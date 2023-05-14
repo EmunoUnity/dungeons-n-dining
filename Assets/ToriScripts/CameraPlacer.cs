@@ -40,5 +40,13 @@ public class CameraPlacer : MonoBehaviour
             unseen.SetActive(false);
 
         }
+
+        if(gameObject.CompareTag("Diner"))
+        {
+            if(collision.gameObject.CompareTag("Player"))
+            {
+                GameObject.FindObjectOfType<Heart>().fullHealth = true;
+            }
+        }
     }
 }

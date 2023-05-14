@@ -20,7 +20,7 @@ public class EnemyScript : MonoBehaviour
 
     public Animator minoAnim;
 
-    public int health = 100;
+    public int health = 200;
 
     public bool isDead = false;
 

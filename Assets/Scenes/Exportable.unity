@@ -4802,6 +4802,7 @@ MonoBehaviour:
   Gorgon: 0
   Cyclops: 0
   GoalAmount: 0
+  goaly: {fileID: 1038708672}
 --- !u!4 &1575289193
 Transform:
   m_ObjectHideFlags: 0

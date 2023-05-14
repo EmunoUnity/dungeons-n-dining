@@ -11,6 +11,8 @@ public class Heart : MonoBehaviour
     public Sprite full;
     public Sprite empty;
 
+    public bool fullHealth;
+
     private PlayKeys play;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,12 @@ public class Heart : MonoBehaviour
         heartsystem();
 
         working();
+
+        if (fullHealth)
+        {
+            myHeath = Harts;
+            fullHealth = false;
+        }
     }
 
     public void heartsystem()
