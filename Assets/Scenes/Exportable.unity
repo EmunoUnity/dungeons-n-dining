@@ -3675,6 +3675,7 @@ MonoBehaviour:
   - {fileID: 1048283648}
   full: {fileID: 21300000, guid: 7ff8fd97a5ebc354eb0e5808cab93dce, type: 3}
   empty: {fileID: 21300000, guid: 3cdb2651ed822184eb1dcbd2366b4c76, type: 3}
+  fullHealth: 0
 --- !u!1 &1202240285
 GameObject:
   m_ObjectHideFlags: 0
