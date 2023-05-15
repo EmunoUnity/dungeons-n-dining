@@ -39,6 +39,7 @@ public class CameraPlacer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             mainCamera.transform.position = placer.position;
+            mainCamera.transform.rotation = placer.rotation;
 
             roof.SetActive(false);
 
