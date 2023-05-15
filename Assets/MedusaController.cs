@@ -104,7 +104,7 @@ public class MedusaController : MonoBehaviour
     private IEnumerator MedHit()
     {
         isHit = true;
-        medAnim.Play("MED_KICK2");
+        medAnim.Play("MED_HIT");
         yield return new WaitForSeconds(.5f);
         isHit = false;
         health -= 25;
