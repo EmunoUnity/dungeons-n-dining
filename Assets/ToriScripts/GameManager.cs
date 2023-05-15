@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour
         if(GoalAmount == GoalMoney)
         {
             Debug.Log("You win!");
+            SceneManager.LoadScene("win");
         }
         
     }

@@ -47,4 +47,9 @@ public class SceneManaging: MonoBehaviour
     {
         SceneManager.LoadScene("Lose");
     }
+
+    public void Defeat()
+    {
+        SceneManager.LoadScene("Defeat");
+    }
 }

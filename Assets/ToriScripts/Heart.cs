@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Heart : MonoBehaviour
 {
@@ -44,6 +45,8 @@ public class Heart : MonoBehaviour
         if(myHeath <= 0)
         {
             myHeath = 0;
+            SceneManager.LoadScene("Defeat");
+
 
         }
 
