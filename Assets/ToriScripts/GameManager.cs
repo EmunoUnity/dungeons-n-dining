@@ -50,6 +50,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
         goaly.text = GoalAmount + " / " + GoalMoney;
 
         if (Minotaur == true)
