@@ -570,6 +570,7 @@ GameObject:
   - component: {fileID: 7099867742137087}
   - component: {fileID: 5646090280311573121}
   - component: {fileID: 6799153794924250236}
+  - component: {fileID: 7552687871129662192}
   m_Layer: 0
   m_Name: DungeonWall (10)
   m_TagString: Untagged
@@ -604,8 +605,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.08635, y: 9.425955, z: 2.64}
+  m_Center: {x: -5.0003495, y: 5.4848194, z: -0.44288826}
 --- !u!114 &6799153794924250236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -618,6 +619,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &7552687871129662192
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568000506065498248}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &643008521729388688
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +812,7 @@ GameObject:
   - component: {fileID: 8267518436047570536}
   - component: {fileID: 3862236967926717098}
   - component: {fileID: 4326115326553840535}
+  - component: {fileID: 1261973781744339377}
   m_Layer: 0
   m_Name: DungeonWall (7)
   m_TagString: Untagged
@@ -829,8 +847,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.08635, y: 9.425955, z: 2.64}
+  m_Center: {x: -5.0003495, y: 5.4848194, z: -0.44288826}
 --- !u!114 &4326115326553840535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,6 +861,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1261973781744339377
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975974725815637138}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1052860682291104795
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +888,7 @@ GameObject:
   - component: {fileID: 5549781473750308147}
   - component: {fileID: 4684295893361718628}
   - component: {fileID: 75473642859964479}
+  - component: {fileID: 4911785988065960152}
   m_Layer: 0
   m_Name: DungeonWall (2)
   m_TagString: Untagged
@@ -888,8 +923,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.08635, y: 9.425955, z: 2.64}
+  m_Center: {x: -5.0003495, y: 5.4848194, z: -0.44288826}
 --- !u!114 &75473642859964479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -902,6 +937,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &4911785988065960152
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052860682291104795}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1106529449054585044
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1486,7 @@ GameObject:
   - component: {fileID: 4308871402188610606}
   - component: {fileID: 7696674350421011821}
   - component: {fileID: 6548052754204329936}
+  - component: {fileID: 3124914425577506220}
   m_Layer: 0
   m_Name: DungeonWall (6)
   m_TagString: Untagged
@@ -1469,8 +1521,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.08635, y: 9.425955, z: 2.64}
+  m_Center: {x: -5.0003495, y: 5.4848194, z: -0.44288826}
 --- !u!114 &6548052754204329936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1483,6 +1535,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &3124914425577506220
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126035430256691910}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &2831574949161107627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1562,7 @@ GameObject:
   - component: {fileID: 6581878866051616156}
   - component: {fileID: 3218281317013376296}
   - component: {fileID: 1789209985520494379}
+  - component: {fileID: 2319929955744359304}
   m_Layer: 0
   m_Name: Left Wall
   m_TagString: Untagged
@@ -1528,8 +1597,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.08635, y: 9.425955, z: 2.64}
+  m_Center: {x: -5.0003495, y: 5.4848194, z: -0.44288826}
 --- !u!114 &1789209985520494379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1542,6 +1611,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &2319929955744359304
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831574949161107627}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &2874010480112582020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2235,6 +2320,7 @@ GameObject:
   - component: {fileID: 4086787039208850448}
   - component: {fileID: 304585175092196148}
   - component: {fileID: 6663033681403645966}
+  - component: {fileID: 5337926301426216163}
   m_Layer: 0
   m_Name: DungeonWall (14)
   m_TagString: Untagged
@@ -2269,8 +2355,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.08635, y: 9.425955, z: 2.64}
+  m_Center: {x: -5.0003495, y: 5.4848194, z: -0.44288826}
 --- !u!114 &6663033681403645966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2283,6 +2369,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &5337926301426216163
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3763914727442348683}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &4084886187991422439
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,6 +2396,7 @@ GameObject:
   - component: {fileID: 7461535550961250969}
   - component: {fileID: 4793801772062305034}
   - component: {fileID: 2449862233419639972}
+  - component: {fileID: 2669731437913713813}
   m_Layer: 0
   m_Name: DungeonWall (12)
   m_TagString: Untagged
@@ -2328,8 +2431,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.08635, y: 9.425955, z: 2.64}
+  m_Center: {x: -5.0003495, y: 5.4848194, z: -0.44288826}
 --- !u!114 &2449862233419639972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2342,6 +2445,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &2669731437913713813
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4084886187991422439}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &4127860550230211408
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,6 +2689,7 @@ GameObject:
   - component: {fileID: 2095151959932013742}
   - component: {fileID: 7767160087530229926}
   - component: {fileID: 868561161863070101}
+  - component: {fileID: 743423213532620171}
   m_Layer: 0
   m_Name: DungeonWall (4)
   m_TagString: Untagged
@@ -2604,8 +2724,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.08635, y: 9.425955, z: 2.64}
+  m_Center: {x: -5.0003495, y: 5.4848194, z: -0.44288826}
 --- !u!114 &868561161863070101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2618,6 +2738,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &743423213532620171
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4749331203467564145}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &4825071821905898669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3027,6 +3163,7 @@ GameObject:
   - component: {fileID: 5999777995829984949}
   - component: {fileID: 9161279567876182072}
   - component: {fileID: 3725725952250885078}
+  - component: {fileID: 9149884008414266394}
   m_Layer: 0
   m_Name: DungeonWall (13)
   m_TagString: Untagged
@@ -3061,8 +3198,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.08635, y: 9.425955, z: 2.64}
+  m_Center: {x: -5.0003495, y: 5.4848194, z: -0.44288826}
 --- !u!114 &3725725952250885078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3075,6 +3212,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &9149884008414266394
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5424328626508096164}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &5778321109341648941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3169,6 +3322,7 @@ GameObject:
   - component: {fileID: 2913888313195344724}
   - component: {fileID: 359419261033363706}
   - component: {fileID: 5342842036971519365}
+  - component: {fileID: 5568367349657295689}
   m_Layer: 0
   m_Name: DungeonWall (3)
   m_TagString: Untagged
@@ -3203,8 +3357,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.08635, y: 9.425955, z: 2.64}
+  m_Center: {x: -5.0003495, y: 5.4848194, z: -0.44288826}
 --- !u!114 &5342842036971519365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3217,6 +3371,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &5568367349657295689
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5811175282396143877}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &5866067186387346714
 GameObject:
   m_ObjectHideFlags: 0
@@ -3465,6 +3635,7 @@ GameObject:
   - component: {fileID: 3243207064034427803}
   - component: {fileID: 8282424072706809629}
   - component: {fileID: 6923778841291223086}
+  - component: {fileID: 4138051434571756128}
   m_Layer: 0
   m_Name: Down Wall
   m_TagString: Untagged
@@ -3513,6 +3684,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &4138051434571756128
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6166532802557036499}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &6389006832772439650
 GameObject:
   m_ObjectHideFlags: 0
@@ -4179,6 +4366,7 @@ GameObject:
   - component: {fileID: 1244450923576038945}
   - component: {fileID: 4618069354439613852}
   - component: {fileID: 246772688045814049}
+  - component: {fileID: 2651324676158698350}
   m_Layer: 0
   m_Name: DungeonWall (9)
   m_TagString: Untagged
@@ -4213,8 +4401,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.08635, y: 9.425955, z: 2.64}
+  m_Center: {x: -5.0003495, y: 5.4848194, z: -0.44288826}
 --- !u!114 &246772688045814049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4227,6 +4415,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &2651324676158698350
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7464149465219557562}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &7549973072417427587
 GameObject:
   m_ObjectHideFlags: 0
@@ -4745,6 +4949,7 @@ GameObject:
   - component: {fileID: 1103390299056969238}
   - component: {fileID: 4511029450206377573}
   - component: {fileID: 6990177159799829639}
+  - component: {fileID: 5445893266086247307}
   m_Layer: 0
   m_Name: Right Wall
   m_TagString: Untagged
@@ -4793,6 +4998,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &5445893266086247307
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8338801390735949434}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &8469177542986436207
 GameObject:
   m_ObjectHideFlags: 0
@@ -4838,6 +5059,7 @@ GameObject:
   - component: {fileID: 7109723453991322826}
   - component: {fileID: 8900746249474858660}
   - component: {fileID: 8626281862409499470}
+  - component: {fileID: 4180390448312171812}
   m_Layer: 0
   m_Name: Up Wall
   m_TagString: Untagged
@@ -4872,8 +5094,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.08635, y: 9.425955, z: 2.64}
+  m_Center: {x: -5.0003495, y: 5.4848194, z: -0.44288826}
 --- !u!114 &8626281862409499470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4886,6 +5108,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ce10c6ce8fe8458e5d4ece8599843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &4180390448312171812
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8777397706706525997}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &9086775993992856060
 GameObject:
   m_ObjectHideFlags: 0
