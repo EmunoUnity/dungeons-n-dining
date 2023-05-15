@@ -5121,6 +5121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 3574931348759512011, guid: df3a9f73671934c40825710d0e13c492, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df3a9f73671934c40825710d0e13c492, type: 3}
 --- !u!4 &534742252429794084 stripped

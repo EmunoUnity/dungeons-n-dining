@@ -46,14 +46,26 @@ public class RequestingFood : MonoBehaviour
                     dinner = meal.name;
                     ordered = true;
                 }
-                else if(ordered && gameManager.drop == dinner)
+                else if(ordered && (gameManager.drop == dinner || gameManager.drop2 == dinner))
                 {
-                    gameManager.mini--;
-                    Debug.Log("Thank you!");
-                    transform.position = new Vector3(100, 100, 100);
-                    gameManager.drop = "";
-                    gameManager.GoalAmount += 200;
-                    leave = true;
+                    if (dinner == "Minotaur")
+                    {
+                        gameManager.mini--;
+                        Debug.Log("Thank you!");
+                        transform.position = new Vector3(100, 100, 100);
+                        gameManager.drop = "";
+                        gameManager.GoalAmount += 200;
+                        leave = true;
+                    }
+                    else if (dinner == "Medusa")
+                    {
+                        gameManager.gor--;
+                        Debug.Log("Thank you!");
+                        transform.position = new Vector3(100, 100, 100);
+                        gameManager.drop2 = "";
+                        gameManager.GoalAmount += 200;
+                        leave = true;
+                    }
                     
                 }
                 else

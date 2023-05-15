@@ -80,9 +80,9 @@ public class MedusaController : MonoBehaviour
         sigh = true;
         attackCollider.SetActive(true);
         medAnim.Play("MED_KICK");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.5f);
         attackCollider.SetActive(false);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         sigh = false;
     }
 

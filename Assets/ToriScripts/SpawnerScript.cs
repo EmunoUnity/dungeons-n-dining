@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpawnerScript : MonoBehaviour
 {
-    public GameObject Spawner;
+    public GameObject Mino;
+    public GameObject Medu;
     //public int x;
     private int y;
     public bool spawn;
@@ -12,12 +13,15 @@ public class SpawnerScript : MonoBehaviour
     public bool test;
     public bool moreTest;
 
+    public int monsterPicker;
+
     private GameObject Monster;
     // Start is called before the first frame update
     void Start()
     {
         //x = 0;
         y = 1;
+        monsterPicker = Random.Range(1, 3);
 
         spawn = false;
         moreTest = false;
@@ -31,6 +35,7 @@ public class SpawnerScript : MonoBehaviour
 
         if(spawn)
         {
+            monsterPicker = Random.Range(1, 3);
             SpawnMonster();
         }
 
@@ -50,11 +55,22 @@ public class SpawnerScript : MonoBehaviour
 
     void SpawnMonster()
     {
-        Monster = Instantiate(Spawner, transform.position, transform.rotation);
-        Monster.transform.SetParent(transform);
-        Monster.name = "Minotaur";
-        y++;
-        spawn = false;
+        if (monsterPicker == 1)
+        {
+            Monster = Instantiate(Mino, transform.position, transform.rotation);
+            Monster.transform.SetParent(transform);
+            Monster.name = "Minotaur";
+            y++;
+            spawn = false;
+        }
+        else if(monsterPicker == 2)
+        {
+            Monster = Instantiate(Medu, transform.position, transform.rotation);
+            Monster.transform.SetParent(transform);
+            Monster.name = "Medusa";
+            y++;
+            spawn = false;
+        }
     }
 
     public IEnumerator SpawnDelay()
