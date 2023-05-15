@@ -156,9 +156,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5097989905805584727}
   - component: {fileID: 7231894244471205515}
+  - component: {fileID: 3797187498501171979}
   m_Layer: 0
   m_Name: Bowl
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,6 +196,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   isDashing: 0
+--- !u!135 &3797187498501171979
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5617222814837896173}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.7345352
+  m_Center: {x: 0, y: 0.23453522, z: 0}
 --- !u!1 &7421161228143765937
 GameObject:
   m_ObjectHideFlags: 0
