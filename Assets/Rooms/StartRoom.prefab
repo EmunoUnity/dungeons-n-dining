@@ -83,6 +83,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.44288826
       objectReference: {fileID: 0}
+    - target: {fileID: 1612716897373437016, guid: 003fac00cf7f73f43b58a97bce335757, type: 3}
+      propertyPath: roof
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1658008855440373083, guid: 003fac00cf7f73f43b58a97bce335757, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

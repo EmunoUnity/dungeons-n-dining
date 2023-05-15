@@ -1784,6 +1784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unseen: {fileID: 3233765019547276621}
   sawSeen: {fileID: 2325652958289489585}
+  roof: {fileID: 0}
 --- !u!1 &3233765019547276621
 GameObject:
   m_ObjectHideFlags: 0
@@ -5448,7 +5449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b754215d705fc084abb7a66e85eb5cac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.901436
+      value: -9.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b754215d705fc084abb7a66e85eb5cac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5456,7 +5457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b754215d705fc084abb7a66e85eb5cac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.735237
+      value: -15.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b754215d705fc084abb7a66e85eb5cac, type: 3}
       propertyPath: m_LocalRotation.w

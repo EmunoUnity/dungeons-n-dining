@@ -10,6 +10,8 @@ public class CameraPlacer : MonoBehaviour
     public GameObject unseen;
     public GameObject sawSeen;
 
+    public GameObject roof;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,8 @@ public class CameraPlacer : MonoBehaviour
 
         unseen.SetActive(true);
         sawSeen.SetActive(false);
+
+        roof.SetActive(false);
         
     }
 
@@ -36,17 +40,30 @@ public class CameraPlacer : MonoBehaviour
         {
             mainCamera.transform.position = placer.position;
 
+            roof.SetActive(false);
+
             sawSeen.SetActive(true);
             unseen.SetActive(false);
 
         }
 
-        if(gameObject.CompareTag("Diner"))
+
+        if (gameObject.CompareTag("Diner"))
         {
             if(collision.gameObject.CompareTag("Player"))
             {
                 GameObject.FindObjectOfType<Heart>().fullHealth = true;
             }
         }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            roof.SetActive(true);
+
+        }
+
     }
 }
