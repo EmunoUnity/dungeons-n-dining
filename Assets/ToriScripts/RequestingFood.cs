@@ -10,6 +10,8 @@ public class RequestingFood : MonoBehaviour
     private string dinner;
     public bool leave;
 
+    private FoodMore food;
+
     public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,8 @@ public class RequestingFood : MonoBehaviour
         ordered = false;
 
         gameManager = FindObjectOfType<GameManager>();
+
+        food = FindObjectOfType<FoodMore>();
 
         leave = false;
     }
@@ -44,6 +48,17 @@ public class RequestingFood : MonoBehaviour
 
                     Debug.Log("I am ordering the " + meal);
                     dinner = meal.name;
+
+                    if (dinner == "Minotaur")
+                    {
+                        food.mino = true;
+                    }
+
+                    if (dinner == "Medusa")
+                    {
+                        food.medu = true;
+                    }
+
                     ordered = true;
                 }
                 else if(ordered && (gameManager.drop == dinner || gameManager.drop2 == dinner))

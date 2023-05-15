@@ -27,8 +27,6 @@ public class GameManager : MonoBehaviour
     private float number;
     public bool pause;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -66,24 +64,29 @@ public class GameManager : MonoBehaviour
             Gorgon = false;
         }
 
-        if (mini < 0)
+        if (mini <= 0)
         {
             mini = 0;
+
+            FindObjectOfType<FoodMore>().mino = false;
         }
 
-        if (gor < 0)
+        if (gor <= 0)
         {
             gor = 0;
+
+            FindObjectOfType<FoodMore>().medu = false;
         }
 
 
         if (mini >= 1) 
         {
             drop = "Minotaur";
+
             //drop = "Mino_UnWrapped";
         }
 
-        if (gor >= 2)
+        if (gor >= 1)
         {
             drop2 = "Medusa";
         }

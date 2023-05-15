@@ -24,7 +24,7 @@ public class CameraPlacer : MonoBehaviour
         unseen.SetActive(true);
         sawSeen.SetActive(false);
 
-        roof.SetActive(false);
+        roof.SetActive(true);
         
     }
 
