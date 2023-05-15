@@ -64,17 +64,27 @@ public class GameManager : MonoBehaviour
             Gorgon = false;
         }
 
-        if (mini <= 0)
+        if (mini < 0)
         {
             mini = 0;
 
             FindObjectOfType<FoodMore>().mino = false;
         }
 
-        if (gor <= 0)
+        if (gor < 0)
         {
             gor = 0;
 
+            FindObjectOfType<FoodMore>().medu = false;
+        }
+
+        if (mini == 0)
+        {
+            FindObjectOfType<FoodMore>().mino = false;
+        }
+
+        if (gor == 0)
+        {
             FindObjectOfType<FoodMore>().medu = false;
         }
 

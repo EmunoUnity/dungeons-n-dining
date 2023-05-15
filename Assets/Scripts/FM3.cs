@@ -1,30 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class FM3 : MonoBehaviour
 {
-    public Transform target;
-    public float speed = 0;
+    private GameObject target;
+    private float speed = 60;
+    public GameManager manager;
+    private bool cry;
 
     private Transform pickupOne, pickupTwo, pickupThree;
 
     private PlayerController pController;
 
     private FoodMovement fMove;
+
     public bool isDashing;
 
     // Start is called before the first frame update
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
+        manager = FindObjectOfType<GameManager>();
 
+        cry = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         var step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
 
         if (isDashing == true)
         {
@@ -33,7 +40,7 @@ public class FM3 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            StartCoroutine(Dash3());
+            StartCoroutine(Dash2());
         }
     }
 
@@ -41,14 +48,27 @@ public class FM3 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            speed = 2.5f;
+            if (!cry)
+            {
+                manager.Gorgon = true;
+                cry = true;
+
+            }
+
+            speed = 10f;
             pickupTwo = other.transform;
+        }
+
+        if (other.gameObject.CompareTag("Diner"))
+        {
+            Destroy(gameObject);
         }
 
     }
 
-    IEnumerator Dash3()
+    IEnumerator Dash2()
     {
+
         isDashing = true;
         yield return new WaitForSeconds(1);
         isDashing = false;

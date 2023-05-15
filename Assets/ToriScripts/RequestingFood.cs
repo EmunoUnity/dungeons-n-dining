@@ -10,7 +10,7 @@ public class RequestingFood : MonoBehaviour
     private string dinner;
     public bool leave;
 
-    private FoodMore food;
+    public FoodMore food;
 
     public GameManager gameManager;
     // Start is called before the first frame update
@@ -32,9 +32,17 @@ public class RequestingFood : MonoBehaviour
     {
         //Debug.Log(meal);
 
+        if (dinner == "Minotaur")
+        {
+            food.mino = true;
+        }
 
+        if (dinner == "Medusa")
+        {
+            food.medu = true;
+        }
 
-        if (Vector3.Distance(this.transform.position, player.transform.position) <= 3)
+        if (Vector3.Distance(this.transform.position, player.transform.position) <= 5)
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
@@ -48,16 +56,6 @@ public class RequestingFood : MonoBehaviour
 
                     Debug.Log("I am ordering the " + meal);
                     dinner = meal.name;
-
-                    if (dinner == "Minotaur")
-                    {
-                        food.mino = true;
-                    }
-
-                    if (dinner == "Medusa")
-                    {
-                        food.medu = true;
-                    }
 
                     ordered = true;
                 }
