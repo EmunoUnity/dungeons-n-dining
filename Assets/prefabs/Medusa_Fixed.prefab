@@ -2699,7 +2699,7 @@ MonoBehaviour:
   health: 200
   isDead: 0
   medPart: {fileID: 673826631316720743, guid: 14bb211b58eb25f4182b62e097ba4993, type: 3}
-  medDrop: {fileID: 268228128060453383, guid: 3a18d18fe4a89314f95ad198de7420c1, type: 3}
+  medDrop: {fileID: 5617222814837896173, guid: 93c15de899b7c874a8463a6eca9c800b, type: 3}
 --- !u!114 &2271708708721600467
 MonoBehaviour:
   m_ObjectHideFlags: 0

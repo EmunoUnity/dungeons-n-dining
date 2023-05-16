@@ -45,7 +45,7 @@ public class FM2 : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -66,6 +66,15 @@ public class FM2 : MonoBehaviour
         }
 
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Diner"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
 
     IEnumerator Dash2()
     {

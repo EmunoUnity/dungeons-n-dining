@@ -66,6 +66,14 @@ public class FM3 : MonoBehaviour
 
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Diner"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
     IEnumerator Dash2()
     {
 
